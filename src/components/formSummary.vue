@@ -5,7 +5,7 @@
         </div>
         <b-collapse :id="'collapse_formular'+index" v-model="toggleOpen" accordion="overview" style="text-align: left">
             <p>{{formular.description}}</p>
-            <b-button style="width: fit-content; float: right" variant="primary">Ausfüllen</b-button>
+            <b-button style="width: fit-content; float: right" variant="primary" to="/forms/1">Ausfüllen</b-button>
         </b-collapse>
     </b-card>
 </template>
@@ -15,7 +15,7 @@
         name: "formularSummary",
         props: {
             formular: {
-                type: Array,
+                type: Object,
                 required: true
             },
             index: {

@@ -10,7 +10,7 @@
 <script>
 // @ is an alias to /src
 import formulareImport from  "@/formulare"
-import FormularSummary from "@/components/formularSummary";
+import FormularSummary from "@/components/formSummary";
 
 export default {
   name: 'Home',

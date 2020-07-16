@@ -5,7 +5,7 @@
                 <b-img id="logo" src="img/icons/android-icon-192x192.png"/>
                 Formulare
             </b-navbar-brand>
-            <b-navbar-toggle target="collapse"></b-navbar-toggle>
+<!--            <b-navbar-toggle target="collapse"></b-navbar-toggle>-->
 
 <!--            <b-collapse id="collapse" is-nav>-->
 <!--                <b-navbar-nav class="">-->
