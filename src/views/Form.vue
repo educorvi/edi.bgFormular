@@ -25,7 +25,7 @@
         },
         methods: {
             submit() {
-                console.log("gesendet")
+                alert("gesendet")
             }
         },
     }

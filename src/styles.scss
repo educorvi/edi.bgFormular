@@ -10,6 +10,7 @@ $breakpoint-mobile: 992px;
 
 html {
   background-color: $primary;
+  scroll-behavior: smooth;
 }
 
 @import 'node_modules/bootstrap/scss/bootstrap';

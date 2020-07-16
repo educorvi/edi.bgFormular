@@ -87,6 +87,110 @@
           "format": "date"
         }
       }
+    },
+    {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Freiwillige Versicherung",
+      "type": "object",
+      "required": ["name", "vorname", "anschrift", "geburtsdatum"],
+      "properties": {
+        "name": {
+          "title": "Name",
+          "description": "Wie auf dem Personalausweis ausgewiesen",
+          "type": "string"
+        },
+        "vorname": {
+          "title": "Vorname",
+          "description": "Wie auf dem Personalausweis ausgewiesen",
+          "type": "string"
+        },
+        "anschrift": {
+          "title": "Anschrift",
+          "type": "string",
+          "widget": "textarea"
+        },
+        "geburtsdatum": {
+          "title": "Geburtsdatum",
+          "format": "date"
+        },
+        "branche": {
+          "title": "Branche",
+          "enum": ["Branche 1", "Branche 2", "Branche 3", "Branche 4"]
+        },
+        "summe": {
+          "title": "Versicherungssumme",
+          "enum": ["40 000 - 51 000", "51 000 - 62 000", "62 000 - 74 000", "74 000 - 85 000", "85 000 - 96 000"]
+        }
+
+      }
+    },
+    {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Anmeldung von Privathaushalten zur UV",
+      "type": "object",
+      "required": ["name", "vorname", "anschrift", "geburtsdatum"],
+      "properties": {
+        "name": {
+          "title": "Name",
+          "description": "Wie auf dem Personalausweis ausgewiesen",
+          "type": "string"
+        },
+        "vorname": {
+          "title": "Vorname",
+          "description": "Wie auf dem Personalausweis ausgewiesen",
+          "type": "string"
+        },
+        "anschrift": {
+          "title": "Anschrift",
+          "type": "string",
+          "widget": "textarea"
+        },
+        "geburtsdatum": {
+          "title": "Geburtsdatum",
+          "format": "date"
+        },
+        "arbeitsstunden": {
+          "title": "Arbeitsstunden",
+          "type": "number",
+          "description": "Anzahl der Arbeitsstunden der im Haushalt beschäftigten Person"
+        },
+        "stundenlohn": {
+          "title": "Stundenlohn",
+          "type": "number",
+          "currency": "€"
+        }
+      }
+    },
+    {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Unbedenklichkeitsbescheinigung",
+      "type": "object",
+      "required": ["name", "vorname", "anschrift", "geburtsdatum"],
+      "properties": {
+        "name": {
+          "title": "Name",
+          "description": "Wie auf dem Personalausweis ausgewiesen",
+          "type": "string"
+        },
+        "vorname": {
+          "title": "Vorname",
+          "description": "Wie auf dem Personalausweis ausgewiesen",
+          "type": "string"
+        },
+        "anschrift": {
+          "title": "Anschrift",
+          "type": "string",
+          "widget": "textarea"
+        },
+        "geburtsdatum": {
+          "title": "Geburtsdatum",
+          "format": "date"
+        },
+        "branche": {
+          "title": "Branche",
+          "enum": ["Branche 1", "Branche 2", "Branche 3", "Branche 4"]
+        }
+      }
     }
   ]
 }

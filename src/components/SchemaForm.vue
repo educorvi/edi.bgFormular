@@ -2,7 +2,7 @@
     <b-form @submit.prevent="submit" class="text-left">
         <slot name="header" :error-messages="activeErrorMessages">
             <b-alert
-                    v-show="activeErrorMessages.length"
+                    :show="activeErrorMessages.length>0"
                     variant="danger"
                     :closable="false"
                     id="error-messages">
@@ -21,7 +21,7 @@
             </slot>
         </template>
         <slot name="actions">
-            <div class="control">
+            <div class="control w-100 text-right">
                 <b-button type="submit" variant="primary" class="mt-2"><span>Senden</span></b-button>
             </div>
         </slot>
@@ -74,6 +74,7 @@
                     this.$emit('submit')
                 } else {
                     this.buildErrors()
+                    scrollTo(0,0)
                 }
             },
             validate() {
@@ -85,15 +86,15 @@
                     if (error.keyword === 'required') {
                         const path = error.dataPath.length === 0 ? `/properties/${error.params.missingProperty}` : error.schemaPath.substring(1, error.schemaPath.length - 8) + `properties/${error.params.missingProperty}`
                         const property = JSONPointer.get(this.schema, path)
-                        return property.title + ' is required'
+                        return property.title + ' muss ausgefüllt werden'
                     } else if (error.keyword === 'format') {
                         const path = error.schemaPath.substring(1, error.schemaPath.length - 7)
                         const property = JSONPointer.get(this.schema, path)
-                        return `${property.title} is not in the correct format. Eg: ${property.example}`
+                        return `${property.title} ist nicht im richtigen Format. Bsp: ${property.example}`
                     } else if (error.keyword === 'pattern') {
                         const path = error.schemaPath.substring(1, error.schemaPath.length - 8)
                         const property = JSONPointer.get(this.schema, path)
-                        return `${property.title} is not in the correct format. Eg: ${property.example}`
+                        return `${property.title} ist nicht im richtigen Format. Bsp:  ${property.example}`
                     }
                 })
             },

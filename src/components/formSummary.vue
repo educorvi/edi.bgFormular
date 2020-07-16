@@ -5,7 +5,7 @@
         </div>
         <b-collapse :id="'collapse_formular'+index" v-model="toggleOpen" accordion="overview" style="text-align: left">
             <p>{{formular.description}}</p>
-            <b-button style="width: fit-content; float: right" variant="primary" to="/forms/0">Ausfüllen</b-button>
+            <b-button style="width: fit-content; float: right" variant="primary" :to="'/forms/'+formular.id">Ausfüllen</b-button>
         </b-collapse>
     </b-card>
 </template>
