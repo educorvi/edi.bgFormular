@@ -1,25 +1,27 @@
 <template>
     <div>
-
-        <b-card-body>
-            <schema-form v-model="model" :schema="form" @submit="submit"/>
+        <b-card-body v-if="schema">
+            <schema-form  v-model="model" :schema="schema" @submit="submit"/>
         </b-card-body>
+        <custom-spinner v-else/>
     </div>
 </template>
 
 <script>
-    import formInput from "@/formular1.json"
+    import formInput from "@/formulare.json"
     import schemaForm from "../components/SchemaForm"
+    import CustomSpinner from "@/components/CustomSpinner";
     export default {
         name: "Formular",
-        components: {schemaForm},
+        components: {CustomSpinner, schemaForm},
         data() {
             return {
-                model: {}
+                model: {},
+                schema: {}
             }
         },
-        computed:{
-            form: () => formInput
+        created() {
+            this.schema = formInput.formulare[this.$route.params.id];
         },
         methods: {
             submit() {

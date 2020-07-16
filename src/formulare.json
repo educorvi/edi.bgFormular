@@ -1,0 +1,92 @@
+{
+  "formulare": [
+    {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Demoformular",
+      "description": "Ein Formular zum Demonstrieren aller Möglichkeiten",
+      "type": "object",
+      "properties": {
+        "vorname": {
+          "title": "Alle Vornamen",
+          "type": "string"
+        },
+        "biographie": {
+          "title": "Biographie",
+          "widget": "textarea",
+          "type": "string",
+          "description": "hier kannst du ganz viel Text schreiben"
+        },
+        "anyof": {
+          "title": "Any Of",
+          "anyOf": [
+            {
+              "type": "string",
+              "title": "String",
+              "maxLength": 5,
+              "enum": [
+                "Test"
+              ]
+            },
+            {
+              "type": "number",
+              "title": "Number",
+              "minimum": 0,
+              "enum": [
+                12
+              ]
+            }
+          ]
+        },
+        "enum": {
+          "title": "Personal",
+          "type": "string",
+          "enum": [
+            "Ich",
+            "Du",
+            "Er",
+            "Sie",
+            "Es"
+          ]
+        },
+        "boolean": {
+          "type": "boolean",
+          "title": "wahr/falsch"
+        },
+        "array": {
+          "type": "array",
+          "title": "Array",
+          "description": "Ein tolles Array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "object": {
+          "title": "Object",
+          "type": "object",
+          "description": "Ein tolles Objekt mit Propertys",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "Name",
+              "example": "Namen eingeben"
+            },
+            "number": {
+              "title": "Alter",
+              "type": "number"
+            }
+          }
+        },
+        "number": {
+          "title": "Zahl",
+          "type": "number",
+          "minimum": 12
+        },
+        "datum": {
+          "title": "Datum",
+          "description": "Was ist dein Lieblingsdatum?",
+          "format": "date"
+        }
+      }
+    }
+  ]
+}

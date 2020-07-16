@@ -7,7 +7,7 @@
 <!--                </b-form-radio>-->
 <!--            </div>-->
 <!--        </b-form-radio-group>-->
-        <b-alert variant="warning" show>"Anyof" not yet implemented. Field "{{schema.title}}" could not be rendered</b-alert>
+        <b-alert variant="warning" show>Not yet implemented. Field "{{schema.title}}" could not be rendered</b-alert>
     </div>
 </template>
 

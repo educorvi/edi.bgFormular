@@ -1,11 +1,11 @@
 <template>
     <b-card style="border-radius: 0" class="summary">
-        <div id="funky" @click="toggleOpen=!toggleOpen">
-                <h4 :class="toggleOpen?'open':''">{{formular.title}}</h4>
+        <div :class="!tooLong?'funky':''" @click="toggleOpen=!toggleOpen">
+                <h5 :class="toggleOpen&&!tooLong?'open':''">{{formular.title}}</h5>
         </div>
         <b-collapse :id="'collapse_formular'+index" v-model="toggleOpen" accordion="overview" style="text-align: left">
             <p>{{formular.description}}</p>
-            <b-button style="width: fit-content; float: right" variant="primary" to="/forms/1">Ausfüllen</b-button>
+            <b-button style="width: fit-content; float: right" variant="primary" to="/forms/0">Ausfüllen</b-button>
         </b-collapse>
     </b-card>
 </template>
@@ -28,22 +28,27 @@
                 toggleOpen: false
             }
         },
+        computed: {
+            tooLong: function () {
+                return this.formular.title.length > 24 && (Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0) < 700);
+            }
+        }
     }
 </script>
 
 <style scoped>
-    #funky {
-        width: 100%;
-    }
+        .funky {
+            width: 100%;
+        }
 
-    #funky > * {
-        width: 100%;
-        white-space: nowrap;
-        transition: width .8s ease;
-        cursor: pointer;
-    }
+        .funky > * {
+            width: 100%;
+            white-space: nowrap;
+            transition: width .8s ease;
+            cursor: pointer;
+        }
 
-    .open {
-        width: 0 !important;
-    }
+        .open {
+            width: 0 !important;
+        }
 </style>
