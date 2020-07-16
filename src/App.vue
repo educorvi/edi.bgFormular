@@ -12,7 +12,7 @@
 <style lang="scss">
   @import "styles";
   #app {
-    width: 100%;
+    background-color: $primary;
     text-align: center;
   }
   #view {
@@ -20,3 +20,9 @@
     margin-bottom: 10px;
   }
 </style>
+<script>
+  import Headbar from "@/components/Headbar";
+  export default {
+    components: {Headbar}
+  }
+</script>

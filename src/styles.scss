@@ -8,5 +8,9 @@ $breakpoint-mobile: 992px;
   background-color: $primary !important;
 }
 
+html {
+  background-color: $primary;
+}
+
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
