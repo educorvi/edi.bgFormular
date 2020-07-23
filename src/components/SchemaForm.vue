@@ -21,8 +21,9 @@
             </slot>
         </template>
         <slot name="actions">
-            <div class="control w-100 text-right">
-                <b-button type="submit" variant="primary" class="mt-2"><span>Senden</span></b-button>
+            <div class="control w-100">
+                <b-button variant="danger" to="/" class="float-left mb-3">Abbrechen</b-button>
+                <b-button type="submit" variant="primary" class="float-right mb-3"><span>Senden</span></b-button>
             </div>
         </slot>
     </b-form>
