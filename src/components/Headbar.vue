@@ -5,23 +5,6 @@
                 <b-img id="logo" src="img/logoS.png"/>
                 Formulare
             </b-navbar-brand>
-<!--            <b-navbar-toggle target="collapse"></b-navbar-toggle>-->
-
-<!--            <b-collapse id="collapse" is-nav>-->
-<!--                <b-navbar-nav class="">-->
-<!--                    <b-nav-item :to="'/login'" v-if="!loggedIn">Login</b-nav-item>-->
-<!--&lt;!&ndash;                    <b-nav-item :to="'/'" @click="logout" v-else>Logout</b-nav-item>&ndash;&gt;-->
-<!--&lt;!&ndash;                    <b-nav-item href="#">Hilfe</b-nav-item>&ndash;&gt;-->
-<!--                    <b-nav-item :to="'/settings'">Einstellungen</b-nav-item>-->
-<!--                    <b-nav-item-dropdown text="Über">-->
-<!--                        <b-dropdown-item :to="'/about'">Info</b-dropdown-item>-->
-<!--                        <b-dropdown-item :to="'/kontakt'">Kontakt</b-dropdown-item>-->
-<!--                        <b-dropdown-item :to="'/impressum'">Impressum</b-dropdown-item>-->
-<!--                        <b-dropdown-item :to="'/datenschutz'">Datenschutz</b-dropdown-item>-->
-<!--                    </b-nav-item-dropdown>-->
-
-<!--                </b-navbar-nav>-->
-<!--            </b-collapse>-->
         </b-navbar>
     </div>
 
