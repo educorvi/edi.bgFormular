@@ -5,20 +5,30 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "zip": "vue-cli-service zip:build",
+    "release": "dotenv release-it",
+    "clean": "del-cli dist*"
   },
   "dependencies": {
     "ajv": "^6.12.3",
+    "archiver": "^5.0.0",
+    "auto-changelog": "^2.2.0",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
     "buefy": "^0.8.20",
     "core-js": "^3.6.5",
+    "del-cli": "^3.0.1",
+    "dotenv-cli": "^3.2.0",
+    "npx": "^10.2.2",
     "register-service-worker": "^1.7.1",
+    "release-it": "^13.6.6",
     "vue": "^2.6.11",
     "vue-json-schema-form": "^1.0.4",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
+    "@release-it/bumper": "^1.4.1",
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-plugin-pwa": "^4.4.6",
